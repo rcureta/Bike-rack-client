@@ -4,7 +4,7 @@ deployed link: https://tranquil-scrubland-53978.herokuapp.com/
 
 screenshot links:
 ![alt text](https://i.imgur.com/hhjk1hd.png)
-![alt text](https://i.imgur.com/zR0tg08.png)
+![alt text](https://i.imgur.com/zR0tG08.png)
 
 
 

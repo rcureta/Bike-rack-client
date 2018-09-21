@@ -8,7 +8,7 @@ screenshot links:
 
 
 
-Tech stack desc: React front end with a node.js backend. Deployed on Heroku with the database hosted by mlab
+Tech stack desc: React front end with a node.js backend. Deployed on Heroku with the database hosted by mlab mongo database
 
 Key parts: 
 src/components/app.js: Hub, responsible for route redirection

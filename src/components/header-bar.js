@@ -30,11 +30,11 @@ export class HeaderBar extends React.Component {
 
     return (
       // < !--Navbar(sit on top) -- >
-      <div style={{ height: '5%', width: '100%' }} className="header-bar w3-bar w3-center w3-blue">
-        <p className="w3-bar-item" /*style={{margin:8}}*/>Rack Mapper</p>
+      <div  className="header-bar w3-bar  w3-blue">
+        <div className="w3-bar-item" /*style={{margin:8}}*/>Rack Mapper</div>
 
-            <a href="#about" className="w3-bar-item w3-button"><i></i>  About the app</a>
-            <AddTrip addDestination={this.props.addDestination} />
+            <div href="#about" className="w3-bar-item w3-button">  About the app</div>
+            <div><AddTrip addDestination={this.props.addDestination} /></div>
 
       </div>
     );

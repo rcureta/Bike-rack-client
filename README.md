@@ -3,6 +3,8 @@ description: A visualization of geographic points mapped onto the google maps AP
 deployed link: https://tranquil-scrubland-53978.herokuapp.com/
 
 screenshot links:
+https://i.imgur.com/hhjk1hd.png
+https://i.imgur.com/zR0tG08.png
 
 Tech stack desc: React front end with a node.js backend. Deployed on Heroku with the database hosted by mlab
 

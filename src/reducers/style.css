@@ -1,0 +1,14 @@
+@media only screen and (max-width: 600px) {
+    .headerStuff {
+    	display: block;
+    }
+
+    .headerBarSize{
+	size: 100%;
+    }
+
+    .dashboardMapSize{
+	size: 100%;
+    }
+}
+

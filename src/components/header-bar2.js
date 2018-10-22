@@ -1,9 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 import { clearAuth } from '../actions/auth';
 
 
 export class HeaderBar extends React.Component {
+  handleClick(){
+  	return <Redirect to = "/About/" />;
+}
+  
   logOut() {
     this.props.dispatch(clearAuth());
     this.ToggleFunction();
@@ -32,7 +37,7 @@ export class HeaderBar extends React.Component {
       <div className="header-bar w3-bar w3-center w3-blue">
         <div className="w3-bar-item" /*style={{margin:8}}*/>Rack Mapper</div>
 
-            <a href="#about" className="w3-bar-item w3-button"><i></i>  About the app</a>
+            <a href="#about" className="w3-bar-item w3-button" onClick= {this.handleClick}><i></i>  About the app</a>
 
 
 

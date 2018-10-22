@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { clearAuth } from '../actions/auth';
 import AddTrip from './add-rack'
-
+import './style.css';
 
 export class HeaderBar extends React.Component {
   logOut() {
@@ -30,11 +30,10 @@ export class HeaderBar extends React.Component {
 
     return (
       // < !--Navbar(sit on top) -- >
-      <div  className="header-bar w3-bar  w3-blue">
-        <div className="w3-bar-item" /*style={{margin:8}}*/>Rack Mapper</div>
+      <div  className="header-bar headerBarSize w3-bar  w3-blue">
+        <div className="w3-bar-item headerStuff" /*style={{margin:8}}*/>Rack Mapper</div>
 
-            <div href="#about" className="w3-bar-item w3-button">  About the app</div>
-            <div><AddTrip addDestination={this.props.addDestination} /></div>
+            <div classname = "headerStuff"><AddTrip addDestination={this.props.addDestination} /></div>
 
       </div>
     );

@@ -1,0 +1,16 @@
+@media only screen and (max-width: 600px) {
+    .headerStuff {
+    	display: block;
+	justify-content: center;
+	flex-direction: column;
+    }
+
+    .headerBarSize{
+	size: 100%;
+    }
+
+    .dashboardMapSize{
+	size: 100%;
+    }
+}
+

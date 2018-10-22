@@ -7,13 +7,24 @@ import { addRack } from '../actions/protected-data';
 // import { addTrip } from '../actions/destination'
 
 class AddTrip extends Component {
-	  onSubmit(values) {
+constructor(props) {
+        super(props);
+
+        this.state = {
+            latitude: 0,
+	    
+            longitude: 0
+        }
+    }
+
+onSubmit(values) {
     return this.props.dispatch(addRack( values.latitude, values.longitude));
   }
 
-  state = {
+
+  /*state = {
    latitude: null, longitude: null
-  }
+  }*/
 
 
 
@@ -30,15 +41,19 @@ class AddTrip extends Component {
   }
 
 
-
   handleSubmit = (e) => {
+
+
     e.preventDefault();
     console.log(this.state);
+    navigator.geolocation.getCurrentPosition((position) => {
+        console.log(position.coords.latitude + " " + position.coords.longitude);
+
+        this.setState({latitude: position.coords.latitude, longitude: position.coords.longitude});
+    console.log('after:'+this.state.latitude);
     this.props.addDestination(this.state);
+    });
     //this.props.dispatch(addRack());
-    this.setState({
-      latitude: '', longitude: ''
-    })
   }
 
   render(){    
@@ -46,15 +61,8 @@ class AddTrip extends Component {
       <div>
         <form onSubmit={this.handleSubmit}>
           <div >
-            <label >Latitude:</label>
-            <input className="input" type="text" placeholder = "Rack Latitude" onChange={this.handleLatitude} value={this.state.latitude}/>
-
-            <label>Longitude:</label>
-            <input className="input" type="text" placeholder = "Rack Longitude" onChange={this.handleLongitude} value={this.state.longitude}/>
-
-
-            <button type="submit">
-              Add a Bikerack
+            <button className='add-button' type="submit">
+              Add a Bikerack at your position
             </button>
           </div>
         </form>

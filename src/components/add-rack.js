@@ -5,7 +5,7 @@ import { Field, reduxForm, focus } from 'redux-form';
 import { addRack } from '../actions/protected-data';
 
 // import { addTrip } from '../actions/destination'
-
+import './style.css';
 class AddTrip extends Component {
 constructor(props) {
         super(props);
@@ -58,7 +58,6 @@ onSubmit(values) {
 
   render(){    
     return (
-      <div>
         <form onSubmit={this.handleSubmit}>
           <div >
             <button className='add-button' type="submit">
@@ -66,7 +65,6 @@ onSubmit(values) {
             </button>
           </div>
         </form>
-      </div>
     )
   }
 }

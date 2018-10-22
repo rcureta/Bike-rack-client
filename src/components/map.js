@@ -4,7 +4,7 @@ import MyGreatPlace from './test-marker';
 import { connect } from 'react-redux';
 
 
- 
+  
 export default function SimpleMap (props) {
     let rackPoints =  props.racks.map(rack => {
       return (

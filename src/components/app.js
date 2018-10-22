@@ -4,6 +4,7 @@ import { Route, withRouter } from 'react-router-dom';
 
 import LandingPage from './landing-page';
 import Dashboard from './dashboard';
+import about from './About';
 import RegistrationPage from './registration-page';
 import ActivityDialog from './activity-dialog';
 import { refreshAuthToken } from '../actions/auth';
@@ -46,6 +47,7 @@ export class App extends React.Component {
       <div className="app w3-top">
 <ActivityDialog minutes={5} />
         <Route exact path="/" component={LandingPage} />
+        <Route exact path="/about" component={about} />
         <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/register" component={RegistrationPage} />
       </div>

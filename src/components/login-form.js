@@ -28,7 +28,7 @@ export class LoginForm extends React.Component {
           this.onSubmit(values)
         )}>
         {error}
-	<h1>Welcome to Rack Mapper</h1>
+	<h1 className = 'headerFont'>Welcome to Rack Mapper</h1>
         <label htmlFor="username">Username</label>
         <Field
           component={Input}

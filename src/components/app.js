@@ -45,7 +45,6 @@ export class App extends React.Component {
   render() {
     return (
       <div className="app w3-top">
-<ActivityDialog minutes={5} />
         <Route exact path="/" component={LandingPage} />
         <Route exact path="/about" component={about} />
         <Route exact path="/dashboard" component={Dashboard} />

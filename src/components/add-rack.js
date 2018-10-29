@@ -12,7 +12,7 @@ constructor(props) {
 
         this.state = {
             latitude: 0,
-	    
+	    showManual: false,
             longitude: 0
         }
     }
@@ -52,19 +52,74 @@ onSubmit(values) {
         this.setState({latitude: position.coords.latitude, longitude: position.coords.longitude});
     console.log('after:'+this.state.latitude);
     this.props.addDestination(this.state);
-    });
+    },(err) => {console.log(err);}, {maximumAge:0, enableHighAccuracy: true});
     //this.props.dispatch(addRack());
   }
 
-  render(){    
+	handleClick = (e) =>{
+		e.preventDefault();
+		this.setState({showManual: true});
+	}
+
+	  handleSubmitManual = (e) => {
+    e.preventDefault();
+    console.log(this.state);
+    this.props.addDestination(this.state);
+    //this.props.dispatch(addRack());
+    this.setState({
+      latitude: '', longitude: ''
+    })
+  }
+
+
+  render(){   
+
+		if(this.state.showManual === true ){
+		 return (
+      <div>
+      <form onSubmit={this.handleSubmitManual}>
+      <div >
+            
+	    <div className = 'block'>
+	    <label >Latitude:</label>
+            <input className="manualInput" type="text" placeholder = "Rack Latitude" onChange={this.handleLatitude} value={this.state.latitude}/>
+		</div>
+		<div className = 'block'>
+
+            <label>Longitude:</label>
+            <input className="manualInput" type="text" placeholder = "Rack Longitude" onChange={this.handleLongitude} value={this.state.longitude}/>
+		</div>
+
+            <button type="submit">
+              Add a Bikerack
+            </button>
+          </div>
+        </form>
+      </div>
+    )
+
+}
+
+
+
+
     return (
-        <form onSubmit={this.handleSubmit}>
+	<div>
+	<form onSubmit={this.handleSubmit}>
           <div >
             <button className='add-button' type="submit">
               Add a Bikerack at your position
             </button>
           </div>
         </form>
+	<form onSubmit = {this.handleClick}>
+		<div>
+		<button className = 'add-button' type = 'submit' onClick = {this.handleClick}>
+			Enter locations manually
+		</button>
+		</div>
+	</form>
+	</div>
     )
   }
 }

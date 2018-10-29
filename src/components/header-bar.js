@@ -30,7 +30,7 @@ export class HeaderBar extends React.Component {
 
     return (
       // < !--Navbar(sit on top) -- >
-      <div  className="header-bar w3-bar w3-center w3-blue">
+      <div  className="header-bar w3-center w3-blue">
         <div className="w3-bar-item">Rack Mapper</div>
 
             <div classname = "headerStuff"><AddTrip addDestination={this.props.addDestination} /></div>

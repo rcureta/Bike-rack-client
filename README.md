@@ -12,8 +12,8 @@ screenshot links:
 https://i.imgur.com/hhjk1hd.png
 https://i.imgur.com/zR0tG08.png
 =======
-![alt text](https://i.imgur.com/hhjk1hd.png)
-![alt text](https://i.imgur.com/zR0tG08.png)
+![alt text](https://i.imgur.com/rR3rWjW.png)
+![alt text](https://i.imgur.com/jUt0AjB.png)
 
 
 Tech stack desc: React front end with a node.js backend. Deployed on Heroku with the database hosted by mlab mongo database

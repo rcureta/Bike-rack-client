@@ -12,13 +12,21 @@ planned updates:
 =======
 
 1). Button to automatically enter current location
+
 2). map interactivity to click the map to place location
+
 3). marker interactivity to display information (avg rack occupancy, image)
+
 4). get about the app to work
 
+
 screenshot links:
+=======
+
 https://i.imgur.com/hhjk1hd.png
+
 https://i.imgur.com/zR0tG08.png
+
 =======
 ![alt text](https://i.imgur.com/rR3rWjW.png)
 ![alt text](https://i.imgur.com/jUt0AjB.png)

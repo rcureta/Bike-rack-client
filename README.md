@@ -20,6 +20,6 @@ Tech stack desc: React front end with a node.js backend. Deployed on Heroku with
 
 Key parts: 
 src/components/app.js: Hub, responsible for route redirection
--src/components/landing-page.js: first page visited
--src/components/dashboard.js:post-login, displays google maps api with markers
---src/components/map.js: responsible for rendering the map. children components are responsible for markers
+src/components/landing-page.js: first page visited
+src/components/dashboard.js:post-login, displays google maps api with markers
+src/components/map.js: responsible for rendering the map. children components are responsible for markers

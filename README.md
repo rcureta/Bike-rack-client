@@ -17,7 +17,6 @@ planned updates:
 
 3). marker interactivity to display information (avg rack occupancy, image)
 
-4). get about the app to work
 
 
 screenshot links:

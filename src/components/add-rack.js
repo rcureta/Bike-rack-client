@@ -45,12 +45,10 @@ onSubmit(values) {
 
 
     e.preventDefault();
-    console.log(this.state);
     navigator.geolocation.getCurrentPosition((position) => {
-        console.log(position.coords.latitude + " " + position.coords.longitude);
+        console.log();
 
         this.setState({latitude: position.coords.latitude, longitude: position.coords.longitude});
-    console.log('after:'+this.state.latitude);
     this.props.addDestination(this.state);
     },(err) => {console.log(err);}, {maximumAge:0, enableHighAccuracy: true});
     //this.props.dispatch(addRack());
@@ -63,7 +61,6 @@ onSubmit(values) {
 
 	  handleSubmitManual = (e) => {
     e.preventDefault();
-    console.log(this.state);
     this.props.addDestination(this.state);
     //this.props.dispatch(addRack());
     this.setState({

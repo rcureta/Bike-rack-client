@@ -32,7 +32,6 @@ export class Dashboard extends React.Component {
   }
 
   render() {
-    console.log(this.props.racks);
     return (
       // < !--Navbar(sit on top) -- >
       <div className="header-bar">

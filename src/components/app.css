@@ -18,3 +18,11 @@ background-size: 100% 100%;
 }
 
 .headerFont{font-size:150%;}
+
+@media only screen and (max-width: 600px) {
+   .login-form {
+    width: 90%;
+   transform: translate(5%, 25%);
+   }
+}
+

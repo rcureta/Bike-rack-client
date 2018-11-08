@@ -24,7 +24,6 @@ export const fetchProtectedData = () => (dispatch, getState) => {
   })
     .then(res => {return normalizeResponseErrors(res).json()})
     .then( data  => {
-      console.log(data.racks);
       dispatch(fetchProtectedDataSuccess(data.racks))
     })
     .catch(err => {
@@ -67,7 +66,6 @@ export const addRack = (  latitude, longitude) => (dispatch, getState) => {
     }
     return res.json();
   }).then((rack) => {
-    console.log(rack);
     dispatch(addRackSuccess(rack));
   }).catch(err => {
     dispatch(addRackError(err));

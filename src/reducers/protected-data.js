@@ -12,8 +12,6 @@ const initialState = {
 
 export default function reducer(state = initialState, action) {
   if (action.type === FETCH_PROTECTED_DATA_SUCCESS) {
-    console.log(state);
-    console.log(action.racks);
     return Object.assign({}, state, {
       racks: action.racks,
       error: ''
@@ -23,7 +21,6 @@ export default function reducer(state = initialState, action) {
       error: action.error
     });
   }else if (action.type === ADD_RACK_SUCCESS) {
-    console.log(action.rack);
     return Object.assign({}, state, {
       racks: [...state.racks,action.rack],
       error: ''

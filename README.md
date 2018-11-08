@@ -37,7 +37,7 @@ Tech stack desc:
 React front end with a node.js backend. Deployed on Heroku with the database hosted by mlab mongo database
 
 Repo for server:
-https://github.com/rcureta/Bike-rack-client
+https://github.com/rcureta/Bike-rack-server
 
 Key parts: 
 =======

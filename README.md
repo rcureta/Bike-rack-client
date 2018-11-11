@@ -8,6 +8,10 @@ deployed link:
 
 https://tranquil-scrubland-53978.herokuapp.com/
 
+Demo account:
+Username: xxx
+Password: xxxxxxxxxx
+
 planned updates:
 =======
 

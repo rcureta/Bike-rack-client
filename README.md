@@ -8,6 +8,10 @@ deployed link:
 
 https://tranquil-scrubland-53978.herokuapp.com/
 
+Demo account:
+Username: xxx
+Password: xxxxxxxxxx
+
 planned updates:
 =======
 
@@ -17,7 +21,6 @@ planned updates:
 
 3). marker interactivity to display information (avg rack occupancy, image)
 
-4). get about the app to work
 
 
 screenshot links:
@@ -36,6 +39,9 @@ Tech stack desc:
 =======
 
 React front end with a node.js backend. Deployed on Heroku with the database hosted by mlab mongo database
+
+Repo for server:
+https://github.com/rcureta/Bike-rack-server
 
 Key parts: 
 =======

@@ -1,3 +1,20 @@
+.headerFont{font-size: 36px;
+font-weight: bold;}
+
+.loginLabel{
+	font-size: 24px;
+	font-weight:bold;
+
+}
+
+.w3-bar-item{
+	font-style: italic;
+  left: 50%;
+}
+.titleImage{
+	max-width: 100%;
+}
+
 .add-button{
     background-color: #FFFFFF; /* Green */
    border-radius: 4px;
@@ -6,7 +23,8 @@
     text-align: center;
     text-decoration: none;
     font-size: 16px;
- }
+   margin: 5px;
+}
 .w3-button{margin:10px;}
 .add-button2{
     background-color: #FFFFFF; /* Green */

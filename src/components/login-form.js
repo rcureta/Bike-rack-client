@@ -5,10 +5,25 @@ import Input from './input';
 import { login } from '../actions/auth';
 import { required, nonEmpty } from '../validators';
 import { Link } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
+
 import './app.css';
 import'./style.css';
 export class LoginForm extends React.Component {
-  onSubmit(values) {
+ 
+   constructor(props) {
+		super(props);
+		this.state = {
+			faq: false
+		};
+  }
+  
+  handleClick(e){
+		this.setState({
+			faq: true
+		});}
+ 
+ onSubmit(values) {
     return this.props.dispatch(login(values.username, values.password));
   }
 
@@ -21,6 +36,11 @@ export class LoginForm extends React.Component {
         </div>
       );
     }
+
+    if (this.state.faq) {
+	return <Redirect to="/about" />;
+    }
+
     return (
       <form
         className="login-form"
@@ -29,7 +49,8 @@ export class LoginForm extends React.Component {
         )}>
         {error}
 	<h1 className = 'headerFont'>Welcome to Rack Mapper</h1>
-        <label htmlFor="username">Username</label>
+        <label className = 'loginLabel'>Username</label>
+         <section htmlFor="username"></section>
         <Field
           component={Input}
           type="text"
@@ -39,7 +60,8 @@ export class LoginForm extends React.Component {
           placeholder="Username"
           validate={[required, nonEmpty]}
         />
-        <label htmlFor="password">Password</label>
+        <label className = 'loginLabel'>Password</label>
+	<section htmlFor='password'></section>
         <Field
           component={Input}
 	  className = 'passwordInput'
@@ -53,7 +75,9 @@ export class LoginForm extends React.Component {
           LOGIN
         </button><br/>
         {/* <Route exact path="/register" component={RegistrationPage} className="w3-bar-item w3-button"/> */}
-        <Link to="/register" className="sign-up">SIGN UP</Link>
+        <Link to="/register" className="sign-up w3-button">SIGN UP</Link>
+	<a href="#about" className="w3-button" onClick= {e=>this.handleClick(e)}><i></i>  About the app</a>
+
       </form>
     );
   }

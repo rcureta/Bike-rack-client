@@ -1,11 +1,11 @@
 //*===== First three validators are used for the username and password =====*//
 
 // required checks that a value has been entered.
-export const required = value => (value ? undefined : 'Required');
+export const required = value => (value ? undefined : 'Required field for login');
 
 // nonEmpty checks that a string which isn't just whitespace has been entered.
 export const nonEmpty = value =>
-  value.trim() !== '' ? undefined : 'Cannot be empty';
+  value.trim() !== '' ? undefined : 'This field cannot be empty';
 
 // isTrimmed makes sure that the user hasn't entered a string with any leading or trailing whitespace.
 export const isTrimmed = value =>

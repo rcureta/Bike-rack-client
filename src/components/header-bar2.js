@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import { clearAuth } from '../actions/auth';
 import './style.css';
+import title from '../images/title.png';
 
 export class HeaderBar extends React.Component {
 
@@ -47,19 +48,13 @@ export class HeaderBar extends React.Component {
     }
 
     return (
-      // < !--Navbar(sit on top) -- >
-      <div className="header-bar w3-bar w3-center w3-blue">
-        <div className="w3-bar-item" /*style={{margin:8}}*/>Rack Mapper</div>
+	<div className="header-bar w3-bar w3-center w3-blue">
+	<img className = 'titleImage' src={title} alt="Welcome to Rack Mapper" />	
+	</div>
 
-            <a href="#about" className="w3-bar-item w3-button" onClick= {e=>this.handleClick(e)}><i></i>  About the app</a>
-
-
-
-      </div>
     );
   }
 }
-
 const mapStateToProps = state => ({
   loggedIn: state.auth.currentUser !== null
 });

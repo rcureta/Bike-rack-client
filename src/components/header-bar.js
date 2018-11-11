@@ -3,6 +3,9 @@ import { connect } from 'react-redux';
 import { clearAuth } from '../actions/auth';
 import AddTrip from './add-rack'
 import './style.css';
+import title from '../images/title.png';
+
+
 
 export class HeaderBar extends React.Component {
   logOut() {
@@ -31,7 +34,7 @@ export class HeaderBar extends React.Component {
     return (
       // < !--Navbar(sit on top) -- >
       <div  className="header-bar w3-center w3-blue">
-        <div className="w3-bar-item">Rack Mapper</div>
+        <img className='titleImage' src = {title}></img>
 
             <div classname = "headerStuff"><AddTrip addDestination={this.props.addDestination} /></div>
 

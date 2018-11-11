@@ -64,7 +64,7 @@ onSubmit(values) {
     this.props.addDestination(this.state);
     //this.props.dispatch(addRack());
     this.setState({
-      latitude: '', longitude: ''
+      latitude: '', longitude: '',showManual: false
     })
   }
 
@@ -78,16 +78,16 @@ onSubmit(values) {
       <div >
             
 	    <div className = 'block'>
-	    <label >Latitude:</label>
+	    <label >Latitude(Positive values for North, negative values for South):</label>
             <input className="manualInput" type="text" placeholder = "Rack Latitude" onChange={this.handleLatitude} value={this.state.latitude}/>
 		</div>
 		<div className = 'block'>
 
-            <label>Longitude:</label>
+            <label>Longitude (Positive values for East, negative values for West):</label>
             <input className="manualInput" type="text" placeholder = "Rack Longitude" onChange={this.handleLongitude} value={this.state.longitude}/>
 		</div>
 
-            <button type="submit">
+            <button className = 'add-button' type="submit">
               Add a Bikerack
             </button>
           </div>

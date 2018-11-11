@@ -56,6 +56,7 @@ const mapStateToProps = state => {
   };
 };
 
+
 export default requiresLogin()(connect(mapStateToProps)(Dashboard));
 
 

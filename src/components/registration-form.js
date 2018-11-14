@@ -50,7 +50,7 @@ export class RegistrationForm extends React.Component {
           disabled={this.props.pristine || this.props.submitting} className="w3-bar-item">
           SIGN UP
         </button>
-	        <Link to="/" className="w3-bar-item">BACK</Link>
+        <Link to="/" className="w3-bar-item">BACK</Link>
       </form>
     );
   }

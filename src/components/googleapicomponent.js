@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import {ScriptCache} from './lib/scriptcache';
+import { ScriptCache } from './lib/scriptcache';
 import GoogleApi from './lib/googleapi';
 
 const defaultMapConfig = {};
@@ -101,11 +101,11 @@ export const wrapper = input => WrappedComponent => {
     onLoad(err, tag) {
       this._gapi = window.google;
 
-      this.setState({loaded: true, google: this._gapi});
+      this.setState({ loaded: true, google: this._gapi });
     }
 
     render() {
-      const {LoadingContainer} = this;
+      const { LoadingContainer } = this;
       if (!this.state.loaded) {
         return <LoadingContainer />;
       }

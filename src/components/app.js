@@ -8,7 +8,7 @@ import about from './About';
 import RegistrationPage from './registration-page';
 import ActivityDialog from './activity-dialog';
 import { refreshAuthToken } from '../actions/auth';
-import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 import HeaderBar from './header-bar';
 
 

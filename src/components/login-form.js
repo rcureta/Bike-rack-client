@@ -8,22 +8,23 @@ import { Link } from 'react-router-dom';
 import { Redirect } from 'react-router-dom';
 
 import './app.css';
-import'./style.css';
+import './style.css';
 export class LoginForm extends React.Component {
- 
-   constructor(props) {
-		super(props);
-		this.state = {
-			faq: false
-		};
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      faq: false
+    };
   }
-  
-  handleClick(e){
-		this.setState({
-			faq: true
-		});}
- 
- onSubmit(values) {
+
+  handleClick(e) {
+    this.setState({
+      faq: true
+    });
+  }
+
+  onSubmit(values) {
     return this.props.dispatch(login(values.username, values.password));
   }
 
@@ -38,7 +39,7 @@ export class LoginForm extends React.Component {
     }
 
     if (this.state.faq) {
-	return <Redirect to="/about" />;
+      return <Redirect to="/about" />;
     }
 
     return (
@@ -48,23 +49,23 @@ export class LoginForm extends React.Component {
           this.onSubmit(values)
         )}>
         {error}
-	<h1 className = 'headerFont'>Welcome to Rack Mapper</h1>
-        <label className = 'loginLabel'>Username</label>
-         <section htmlFor="username"></section>
+        <h1 className='headerFont'>Welcome to Rack Mapper</h1>
+        <label className='loginLabel'>Username</label>
+        <section htmlFor="username"></section>
         <Field
           component={Input}
           type="text"
-	  className = 'userInput'
+          className='userInput'
           name="username"
           id="username"
           placeholder="Username"
           validate={[required, nonEmpty]}
         />
-        <label className = 'loginLabel'>Password</label>
-	<section htmlFor='password'></section>
+        <label className='loginLabel'>Password</label>
+        <section htmlFor='password'></section>
         <Field
           component={Input}
-	  className = 'passwordInput'
+          className='passwordInput'
           type="password"
           name="password"
           id="password"
@@ -73,10 +74,10 @@ export class LoginForm extends React.Component {
         />
         <button disabled={this.props.pristine || this.props.submitting} className="log-in">
           LOGIN
-        </button><br/>
+        </button><br />
         {/* <Route exact path="/register" component={RegistrationPage} className="w3-bar-item w3-button"/> */}
         <Link to="/register" className="sign-up w3-button">SIGN UP</Link>
-	<a href="#about" className="w3-button" onClick= {e=>this.handleClick(e)}><i></i>  About the app</a>
+        <a href="#about" className="w3-button" onClick={e => this.handleClick(e)}><i></i>  About the app</a>
 
       </form>
     );

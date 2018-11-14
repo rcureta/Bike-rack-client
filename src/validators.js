@@ -11,7 +11,8 @@ export const nonEmpty = value =>
 export const isTrimmed = value =>
   value.trim() === value ? undefined : 'Cannot start or end with whitespace';
 
-
+export const number = value =>
+  value && isNaN(Number(value)) ? 'Value entered must be a number' : undefined;
 
 //*===== Password field uses the length validators to check that the password contains the right number of characters.
 // The length validator is a function which returns another function, and it is this inner function which returns the string if the field is invalid. 

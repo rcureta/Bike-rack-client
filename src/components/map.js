@@ -4,28 +4,31 @@ import MyGreatPlace from './test-marker';
 import { connect } from 'react-redux';
 
 
-  
-export default function SimpleMap (props) {
-    let rackPoints =  props.racks.map(rack => {
-      return (
-            <MyGreatPlace key={rack.id} lat={rack.latitude} lng={rack.longitude} />
-      )
-    })
+
+export default function SimpleMap(props) {
+  let rackPoints = props.racks.map(rack => {
     return (
-      // Important! Always set the container height explicitly
-      <div style={{ height: '97vh', width: '100%' }}>
+      <MyGreatPlace key={rack.id} lat={rack.latitude} lng={rack.longitude} />
+    )
+  })
+  return (
+    // Important! Always set the container height explicitly
+    <div style={{ height: '97vh', width: '100%' }}>
       <GoogleMapReact
-          bootstrapURLKeys={{ key: 'AIzaSyASNm1y3GtT8TY4hLgLbLcn8hkNiMx_ADs' }}
-          defaultCenter={{  lat: 32.71,
-            lng: -117.16 }}
-          defaultZoom={11}
-        >
+        bootstrapURLKeys={{ key: 'AIzaSyASNm1y3GtT8TY4hLgLbLcn8hkNiMx_ADs' }}
+        defaultCenter={{
+          lat: 32.71,
+          lng: -117.16
+        }}
+        defaultZoom={11}
+      >
 
 
-		{rackPoints}
+        {rackPoints}
 
-        </GoogleMapReact></div>
-)}
+      </GoogleMapReact></div>
+  )
+}
 
 
 /*const mapStateToProps = (state) => ({

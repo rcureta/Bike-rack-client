@@ -8,17 +8,18 @@ import title from '../images/title.png';
 export class HeaderBar extends React.Component {
 
   constructor(props) {
-		super(props);
-		this.state = {
-			faq: false
-		};
+    super(props);
+    this.state = {
+      faq: false
+    };
   }
-  
-  handleClick(e){
-		this.setState({
-			faq: true
-		});}
-  
+
+  handleClick(e) {
+    this.setState({
+      faq: true
+    });
+  }
+
   logOut() {
     this.props.dispatch(clearAuth());
     this.ToggleFunction();
@@ -37,9 +38,9 @@ export class HeaderBar extends React.Component {
   render() {
 
     if (this.state.faq) {
-			return <Redirect to="/about" />;
+      return <Redirect to="/about" />;
     }
-    
+
     let logOutButton;
     if (this.props.loggedIn) {
       logOutButton = (
@@ -48,9 +49,9 @@ export class HeaderBar extends React.Component {
     }
 
     return (
-	<div className="header-bar w3-bar w3-center w3-blue">
-	<img className = 'titleImage' src={title} alt="Welcome to Rack Mapper" />	
-	</div>
+      <div className="header-bar w3-bar w3-center w3-blue">
+        <img className='titleImage' src={title} alt="Welcome to Rack Mapper" />
+      </div>
 
     );
   }

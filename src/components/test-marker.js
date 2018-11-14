@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import shouldPureComponentUpdate from 'react-pure-render/function';
 
-import {greatPlaceStyle} from './mapstyling.js';
+import { greatPlaceStyle } from './mapstyling.js';
 
 export default class MyGreatPlace extends Component {
 
@@ -11,8 +11,8 @@ export default class MyGreatPlace extends Component {
 
   render() {
     return (
-       <div style={greatPlaceStyle}>
-       </div>
+      <div style={greatPlaceStyle}>
+      </div>
     );
   }
 }

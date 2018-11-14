@@ -8,11 +8,19 @@ import AddRack from './add-rack'
 import SimpleMap from './map';
 import Marker from './marker';
 import HeaderBar from './header-bar';
+import { clearAuth } from '../actions/auth';
+import './app.css';
+import { clearAuthToken } from '../local-storage';
 
 
 export class Dashboard extends React.Component {
   componentDidMount() {
     this.props.dispatch(fetchProtectedData());
+  }
+
+  logOut() {
+    this.props.dispatch(clearAuth());
+    clearAuthToken();
   }
 
   addDestination = (newRack) => {
@@ -35,11 +43,15 @@ export class Dashboard extends React.Component {
     return (
       // < !--Navbar(sit on top) -- >
       <div className="header-bar">
-         <HeaderBar addDestination={this.addDestination} />
+        <HeaderBar addDestination={this.addDestination} />
+        <button className='logOutButton' onClick={() => this.logOut()}>
+          Log Out
+		</button>
+
         <div>
-        
-<SimpleMap racks={this.props.racks} />
-	</div>
+
+          <SimpleMap racks={this.props.racks} />
+        </div>
       </div>
     );
   }

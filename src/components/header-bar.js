@@ -33,10 +33,10 @@ export class HeaderBar extends React.Component {
 
     return (
       // < !--Navbar(sit on top) -- >
-      <div  className="header-bar w3-center w3-blue">
-        <img className='titleImage' src = {title}></img>
+      <div className="header-bar w3-center w3-blue">
+        <img className='titleImage' src={title}></img>
 
-            <div classname = "headerStuff"><AddTrip addDestination={this.props.addDestination} /></div>
+        <div classname="headerStuff"><AddTrip addDestination={this.props.addDestination} /></div>
 
       </div>
     );

@@ -11,8 +11,8 @@ deployed link:
 https://rackmapper.herokuapp.com/
 
 Demo account:
-Username: xxx
-Password: xxxxxxxxxx
+Username: demo-user 
+Password: demo-password
 
 planned updates:
 =======

@@ -8,7 +8,7 @@ With this app, users will be able to, from the comfort of home or out on the roa
 deployed link:
 =======
 
-https://tranquil-scrubland-53978.herokuapp.com/
+https://rackmapper.herokuapp.com/
 
 Demo account:
 Username: xxx

@@ -5,9 +5,10 @@ import { registerUser } from '../actions/users';
 import { login } from '../actions/auth';
 import Input from './input';
 import { required, nonEmpty, matches, length, isTrimmed } from '../validators';
+import'./registration-form.css';
+
 const passwordLength = length({ min: 6, max: 72 });
 const matchesPassword = matches('password');
-
 export class RegistrationForm extends React.Component {
   onSubmit(values) {
     const { username, password } = values;
@@ -50,7 +51,7 @@ export class RegistrationForm extends React.Component {
           disabled={this.props.pristine || this.props.submitting} className="w3-bar-item">
           SIGN UP
         </button>
-        <Link to="/" className="w3-bar-item">BACK</Link>
+        <Link to="/" className="w3-bar-item left-margin">BACK</Link>
       </form>
     );
   }

@@ -3,6 +3,8 @@ description:
 
 A visualization of geographic points mapped onto the google maps API to help bikers keep a record of bike racks in their local area.
 
+With this app, users will be able to, from the comfort of home or out on the roads, co-ordinate their biking trips better. Without knowledge of where to legally park your bike, a biker can suffer heavy delays from having to scour city blocks for a bike rack. Likewise, planning a long-distance biking trip is difficult without the knowledge of where you can park. This was the primary inspiration for the application, as most of it's kind are restricted to mobile-only apps.
+
 deployed link:
 =======
 
